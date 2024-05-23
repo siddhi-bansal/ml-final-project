@@ -3,13 +3,18 @@
 
 Our goal was to train a machine-learning model that predicts a restaurant’s star rating based on specific restaurant attributes (total_open_hours, RestaurantsTakeOut, RestaurantsDelivery, Alcohol). This model can be used by new restaurant businesses to predict their star rating (as a measure of success) using the specific features required by the model
 
+Our chosen dataset is accessible here: https://yelp.com/dataset/download. Specifically, we used the  `yelp_academic_dataset_business.json` file.
+
 ### I. Data Preparation
+
 Our original dataset contains 150,346 entries of businesses recorded on Yelp, each record containing attributes such as `name`, `address`, `latitude`, `longitude`, `review_count`, and `stars`. Since we want our model to focus on predicting the success of restaurants, we only keep the businesses that are labeled as `Restaurants`. Additionally, we drop the columns that are irrelevant and those that will bias/skew our models, such as `name` and `business_id`. We are choosing to deal with NaNs by dropping all records with NaN values in the original dataset and further downsizing our dataset by dropping all businesses that are no longer open.
 
 ### II. Data Exploration
+
 We searched for correlations between various combinations of the remaining attributes. Eventually, we visualized the locations of the restaurants on a Cartesian plane by `latitude` (horizontal axis) and `longitude` (vertical axis), features of the original dataset. An important observation we made is that the data included information about the business’s daily hours. Another is determining how many missing values each feature had. This is critical to choose which columns to remove (to also reduce dimensionality) and maintain a dataset good enough for our training purposes. There were quite a few missing values in many of the columns created (from the `attributes` column) during data preparation since the data was initially unstructured JSON.
 
 ### III. Feature Engineering
+
 After exploring the data, we sought to create a final dataframe by modifying or aggregating certain features and leveraging the stacking technique to create an ensemble.
 
 We started by creating our own function to parse each day’s hours. While the hours were in 24-hour format, there were some inconsistencies within the data. We made a few basic assumptions such as the following which are accounted for in the code:
@@ -76,3 +81,9 @@ Our final model is a stacked ensemble, consisting of KNN Regression and Decision
 Looking ahead, we may be able to further improve accuracy by reintroducing certain features that were dropped during the data preparation period. Features we considered engineering were:
 - Cuisine (categorical) - would require us to categorize the ‘cuisine’ attribute that a portion of the data entries included (the rest had missing values). This would involve the use of a dictionary that classifies any nationality from those listed under this attribute (eg. Greek, Mexican) to a general region, such as Mediterranean or South Asian. Categorization would be necessary to reduce excessive dimensions in the case of one-hot-encoding.
 - Review counts - could potentially weigh the “credibility” of a data point during model training based on its review count. However, this may introduce class imbalances and bais into the dataset, since most entries for review_count were < 10 with several outliers between 4,000-10,000. Additionally, it may be unfair to associate a newer restaurant (has a low review_count) with a lower rating.
+
+### To Run Our Code
+
+All of our final code is in `submission.ipnyb`, while all of our testing/exploration code can be found in the `workbooks/` directory. We use `data/yelp_academic_dataset_business.json` as the path to access the dataset, so please ensure that you upload the dataset with a matching directory structure to run the notebooks seamlessly.
+
+Our chosen dataset is accessible here: https://yelp.com/dataset/download. We used the `yelp_academic_dataset_business.json` file.
