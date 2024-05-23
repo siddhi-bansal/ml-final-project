@@ -3,7 +3,7 @@
 
 Our goal was to train a machine-learning model that predicts a restaurant’s star rating based on specific restaurant attributes (total_open_hours, RestaurantsTakeOut, RestaurantsDelivery, Alcohol). This model can be used by new restaurant businesses to predict their star rating (as a measure of success) using the specific features required by the model
 
-Our chosen dataset is accessible here: https://yelp.com/dataset/download. Specifically, we used the 'yelp_academic_dataset_business.json' file.
+Our chosen dataset is accessible here: https://yelp.com/dataset/download. Specifically, we used the  `yelp_academic_dataset_business.json` file.
 
 ### I. Data Preparation
 
@@ -84,6 +84,6 @@ Looking ahead, we may be able to further improve accuracy by reintroducing certa
 
 ### To Run Our Code
 
-All of our final code is in 'submission.ipnyb', while all of our testing/exploration code can be found in the 'workbooks/' directory. We use 'data/yelp_academic_dataset_business.json' as the path to access the dataset, so please ensure that you upload the dataset with the appropriate directory structure to run the notebooks seamlessly.
+All of our final code is in `submission.ipnyb`, while all of our testing/exploration code can be found in the `workbooks/` directory. We use `data/yelp_academic_dataset_business.json` as the path to access the dataset, so please ensure that you upload the dataset with a matching directory structure to run the notebooks seamlessly.
 
-Once again, our chosen dataset is accessible here: https://yelp.com/dataset/download. We used the 'yelp_academic_dataset_business.json' file.
+Our chosen dataset is accessible here: https://yelp.com/dataset/download. We used the `yelp_academic_dataset_business.json` file.
