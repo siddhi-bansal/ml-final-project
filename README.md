@@ -58,7 +58,7 @@ The models we tested in search of the best accuracy include:
 - Neural Nets Classifier: Used a pipeline consisting of a standard scalar and the MLPClassifier from sklearn with a hidden layer size of 30. GridSearchCV is used to find the optimal hyperparameters, then we do a 5-fold cross validation and a maximum accuracy of 27.12% when trained on the dataset with only stack 1.
 - K-Means Classification: Used the KMeans clustering model to classify all entries into 9 clusters (the range of ‘stars’ is 1.0 - 4.5 at 0.5 intervals). Yielded the best (minimum) MSE of 0.7353 when using the stack 2 dataset.
 
-## K-Means Silhouette and MSE Values by Dataset
+#### K-Means Silhouette and MSE Values by Dataset
 
 We concluded that K-Means Clustering is the best model to use for our data, since it demonstrates an MSE of 0.7353 and silhouette score of 0.8916. This model performed significantly better than the rest that we tested.
 
