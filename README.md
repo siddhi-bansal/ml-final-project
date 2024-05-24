@@ -1,7 +1,7 @@
 # Refining Ratings: Using Machine Learning to Predicting Restaurant Star Ratings
 **Group: Siddhi Bansal, Isha Kalanee, Ishita Kumari, Akshat Shah**
 
-Our goal was to train a machine-learning model that predicts a restaurant’s star rating based on specific restaurant attributes (total_open_hours, RestaurantsTakeOut, RestaurantsDelivery, Alcohol). This model can be used by new restaurant businesses to predict their star rating (as a measure of success) using the specific features required by the model
+Our goal was to train a machine-learning model that predicts a restaurant’s star rating based on specific restaurant attributes (total_open_hours, RestaurantsTakeOut, RestaurantsDelivery, Alcohol). This model can be used by new restaurant businesses to predict their star rating (as a measure of success) using the specific features required by the model.
 
 Our chosen dataset is accessible here: https://yelp.com/dataset/download. Specifically, we used the  `yelp_academic_dataset_business.json` file.
 
